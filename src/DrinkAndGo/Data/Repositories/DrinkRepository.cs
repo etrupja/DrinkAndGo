@@ -4,30 +4,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DrinkAndGo.Data.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace DrinkAndGo.Data.Repositories
 {
     public class DrinkRepository : IDrinkRepository
     {
-        public IEnumerable<Drink> Drinks
+        private readonly AppDbContext _appDbContext;
+        public DrinkRepository(AppDbContext appDbContext)
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
+            _appDbContext = appDbContext;
         }
 
-        public IEnumerable<Drink> PreferredDrinks
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public IEnumerable<Drink> Drinks => _appDbContext.Drinks.Include(c => c.Category);
 
-        public Drink GetDrinkById(int drinkId)
-        {
-            throw new NotImplementedException();
-        }
+        public IEnumerable<Drink> PreferredDrinks => _appDbContext.Drinks.Where(p => p.IsPreferredDrink).Include(c => c.Category);
+
+        public Drink GetDrinkById(int drinkId) => _appDbContext.Drinks.FirstOrDefault(p => p.DrinkId == drinkId);
     }
 }

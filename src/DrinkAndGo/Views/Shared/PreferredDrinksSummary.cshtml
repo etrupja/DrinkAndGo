@@ -1,0 +1,21 @@
+﻿@model Drink
+
+<div class="col-sm-4 col-lg-4 col-md-4">
+    <div class="thumbnail">
+        <img src="@Model.ImageThumbnailUrl" alt="" />
+        <div class="caption">
+            <h3 class="pull-right">@Model.Price.ToString("c")</h3>
+            <h3>
+                <a asp-controller="Pie" asp-action="Details" asp-route-id="@Model.DrinkId">@Model.Name</a>
+            </h3>
+            <p>@Model.ShortDescription</p>
+        </div>
+        <div class="addToCart">
+            <p class="button">
+                <a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-pieId="@Model.DrinkId">
+                    Add to cart
+                </a>
+            </p>
+        </div>
+    </div>
+</div>

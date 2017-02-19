@@ -12,6 +12,8 @@ using DrinkAndGo.Data;
 using Microsoft.EntityFrameworkCore;
 using DrinkAndGo.Data.Repositories;
 using DrinkAndGo.Data.Interfaces;
+using DrinkAndGo.Data.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace DrinkAndGo
 {
@@ -30,9 +32,16 @@ namespace DrinkAndGo
             //Server configuration
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(_configurationRoot.GetConnectionString("DefaultConnection")));
-            //Authentication
+            //Authentication, Identity config
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<AppDbContext>();
+
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddTransient<IDrinkRepository, DrinkRepository>();
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(sp => ShoppingCart.GetCart(sp));
+            services.AddTransient<IOrderRepository, OrderRepository>();
 
             services.AddMvc();
             services.AddMemoryCache();
@@ -45,6 +54,7 @@ namespace DrinkAndGo
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseSession();
+            app.UseIdentity();
 
             app.UseMvc(routes =>
             {

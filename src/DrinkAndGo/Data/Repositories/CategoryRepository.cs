@@ -9,12 +9,11 @@ namespace DrinkAndGo.Data.Repositories
 {
     public class CategoryRepository : ICategoryRepository
     {
-        public IEnumerable<Category> Categories
+        private readonly AppDbContext _appDbContext;
+        public CategoryRepository(AppDbContext appDbContext)
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
+            _appDbContext = appDbContext;
         }
+        public IEnumerable<Category> Categories => _appDbContext.Categories;
     }
 }

@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DrinkAndGo.Data.Interfaces
+namespace DrinkAndGo.ViewModels
 {
-    public interface ICategoryRepository
+    public class HomeViewModel
     {
-        IEnumerable<Category> Categories { get;}
+        public IEnumerable<Drink> PreferredDrinks { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DrinkAndGo.Data.Interfaces
 {
-    interface IOrderRepository
+    public interface IOrderRepository
     {
         void CreateOrder(Order order);
     }
