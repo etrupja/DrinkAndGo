@@ -126,8 +126,8 @@ namespace DrinkAndGo.Data
                 {
                     var genresList = new Category[]
                     {
-                        new Category { CategoryName = "Alcoholic" },
-                        new Category { CategoryName = "Non-alcoholic" }
+                        new Category { CategoryName = "Alcoholic", Description="All alcoholic drinks" },
+                        new Category { CategoryName = "Non-alcoholic", Description="All non-alcoholic drinks" }
                     };
 
                     categories = new Dictionary<string, Category>();
