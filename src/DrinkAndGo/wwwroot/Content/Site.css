@@ -1,18 +1,6 @@
-﻿/*!
- * Start Bootstrap - Shop Homepage (http://startbootstrap.com/)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
-
-
-/*@font-face {
-    font-family: 'sourcesanspro-regular';
-    src: url('sourcesanspro-regular.ttf') format('truetype');
-}*/
+﻿
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    background-image: url('/images/pattern.png');
-    background-repeat: repeat;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -104,4 +92,12 @@ footer {
 {
   background-color: #fcaeae !important;
   border-color: #fba1a1 !important;
+}
+
+.btn:hover{
+    cursor:pointer;
+}
+
+a:hover{
+    cursor:pointer;
 }

@@ -8,6 +8,9 @@ namespace DrinkAndGo.Controllers
 {
     public class ContactController : Controller
     {
-        public ViewResult Index() => View();
+        public ViewResult Index()
+        {
+            return View();
+        }
     }
 }
