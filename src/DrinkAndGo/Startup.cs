@@ -8,6 +8,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
+using DrinkAndGo.Data;
+using Microsoft.EntityFrameworkCore;
+using DrinkAndGo.Data.Repositories;
+using DrinkAndGo.Data.Interfaces;
 
 namespace DrinkAndGo
 {
@@ -23,6 +27,12 @@ namespace DrinkAndGo
         }
         public void ConfigureServices(IServiceCollection services)
         {
+            //Server configuration
+            services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(_configurationRoot.GetConnectionString("DefaultConnection")));
+            //Authentication
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<IDrinkRepository, DrinkRepository>();
 
             services.AddMvc();
             services.AddMemoryCache();
@@ -36,10 +46,19 @@ namespace DrinkAndGo
             app.UseStaticFiles();
             app.UseSession();
 
-            app.Run(async (context) =>
+            app.UseMvc(routes =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                routes.MapRoute(
+                    name: "categoryfilter",
+                    template: "Drink/{action}/{category?}",
+                    defaults: new { Controller = "Drink", action = "List" });
+
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{Id?}");
             });
+
+            DbInitializer.Seed(app);
         }
     }
 }
