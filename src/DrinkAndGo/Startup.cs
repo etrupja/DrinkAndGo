@@ -10,6 +10,7 @@ using DrinkAndGo.Data.Repositories;
 using DrinkAndGo.Data.Interfaces;
 using DrinkAndGo.Data.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using System.Data.SqlClient;
 
 namespace DrinkAndGo
 {
@@ -54,6 +55,11 @@ namespace DrinkAndGo
 
             app.UseMvc(routes =>
             {
+                routes.MapRoute(
+                   name: "drinkdetails",
+                   template: "Drink/Details/{drinkId?}",
+                   defaults: new { Controller = "Drink", action = "Details"});
+
                 routes.MapRoute(
                     name: "categoryfilter",
                     template: "Drink/{action}/{category?}",

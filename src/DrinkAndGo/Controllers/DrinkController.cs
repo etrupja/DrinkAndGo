@@ -43,5 +43,15 @@ namespace DrinkAndGo.Controllers
                 CurrentCategory = currentCategory
             });
         }
+
+        public ViewResult Details(int drinkId)
+        {
+            var drink = _drinkRepository.Drinks.FirstOrDefault(d => d.DrinkId == drinkId);
+            if (drink == null) 
+            {
+                return View("~/Views/Error/Error.cshtml");
+            }
+            return View(drink);
+        }
     }
 }
