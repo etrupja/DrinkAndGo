@@ -19,9 +19,13 @@ namespace DrinkAndGo.Controllers
             _shoppingCart = shoppingCart;
         }
 
-        public IActionResult Checkout() => View();
+        public IActionResult Checkout()
+        {
+            return View();
+        } 
 
-        public IActionResult CheckOut(Order order)
+        [HttpPost]
+        public IActionResult Checkout(Order order)
         {
             var items = _shoppingCart.GetShoppingCartItems();
             _shoppingCart.ShoppingCartItems = items;
