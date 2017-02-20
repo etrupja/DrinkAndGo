@@ -31,7 +31,7 @@ namespace DrinkAndGo.Controllers
             _shoppingCart.ShoppingCartItems = items;
             if (_shoppingCart.ShoppingCartItems.Count == 0)
             {
-                ModelState.AddModelError("", "Your card is empty, add some pies first");
+                ModelState.AddModelError("", "Your card is empty, add some drinks first");
             }
 
             if (ModelState.IsValid)

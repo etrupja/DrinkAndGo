@@ -26,13 +26,13 @@ namespace DrinkAndGo.Controllers
 
             dbDrinks = _drinkRepository.Drinks.OrderBy(p => p.DrinkId).Take(10);
 
-            List<DrinkViewModel> pies = new List<DrinkViewModel>();
+            List<DrinkViewModel> drinks = new List<DrinkViewModel>();
 
             foreach (var dbDrink in dbDrinks)
             {
-                pies.Add(MapDbDrinkToDrinkViewModel(dbDrink));
+                drinks.Add(MapDbDrinkToDrinkViewModel(dbDrink));
             }
-            return pies;
+            return drinks;
         }
 
         private DrinkViewModel MapDbDrinkToDrinkViewModel(Drink dbDrink) => new DrinkViewModel()

@@ -40,9 +40,9 @@ namespace DrinkAndGo.Controllers
             return RedirectToAction("Index");
         }
 
-        public RedirectToActionResult RemoveFromShoppingCart(int pieId)
+        public RedirectToActionResult RemoveFromShoppingCart(int drinkId)
         {
-            var selectedDrink = _drinkRepository.Drinks.FirstOrDefault(p => p.DrinkId == pieId);
+            var selectedDrink = _drinkRepository.Drinks.FirstOrDefault(p => p.DrinkId == drinkId);
             if (selectedDrink != null)
             {
                 _shoppingCart.RemoveFromCart(selectedDrink);
