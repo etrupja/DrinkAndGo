@@ -22,6 +22,7 @@ namespace DrinkAndGo.Controllers
 
         public ViewResult List(string category)
         {
+            string _category = category;
             IEnumerable<Drink> drinks;
             string currentCategory = string.Empty;
 
@@ -32,8 +33,13 @@ namespace DrinkAndGo.Controllers
             }
             else
             {
-                drinks = _drinkRepository.Drinks.Where(p => p.Category.CategoryName == category)
-                   .OrderBy(p => p.DrinkId);
+                if (string.Equals("Alcoholic", _category, StringComparison.OrdinalIgnoreCase) )
+                {
+                    drinks = _drinkRepository.Drinks.Where(p => p.Category.CategoryName.Equals("Alcoholic")).OrderBy(p => p.Name);
+                }
+                else
+                    drinks = _drinkRepository.Drinks.Where(p => p.Category.CategoryName.Equals("Non-alcoholic")).OrderBy(p => p.Name);
+
                 currentCategory = _categoryRepository.Categories.FirstOrDefault(c => c.CategoryName == category).CategoryName;
             }
 
