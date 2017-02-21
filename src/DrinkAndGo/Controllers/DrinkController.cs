@@ -33,14 +33,12 @@ namespace DrinkAndGo.Controllers
             }
             else
             {
-                if (string.Equals("Alcoholic", _category, StringComparison.OrdinalIgnoreCase) )
-                {
+                if (string.Equals("Alcoholic", _category, StringComparison.OrdinalIgnoreCase))
                     drinks = _drinkRepository.Drinks.Where(p => p.Category.CategoryName.Equals("Alcoholic")).OrderBy(p => p.Name);
-                }
                 else
                     drinks = _drinkRepository.Drinks.Where(p => p.Category.CategoryName.Equals("Non-alcoholic")).OrderBy(p => p.Name);
 
-                currentCategory = _categoryRepository.Categories.FirstOrDefault(c => c.CategoryName == category).CategoryName;
+                currentCategory = _category;
             }
 
             return View(new DrinksListViewModel
@@ -53,7 +51,7 @@ namespace DrinkAndGo.Controllers
         public ViewResult Details(int drinkId)
         {
             var drink = _drinkRepository.Drinks.FirstOrDefault(d => d.DrinkId == drinkId);
-            if (drink == null) 
+            if (drink == null)
             {
                 return View("~/Views/Error/Error.cshtml");
             }

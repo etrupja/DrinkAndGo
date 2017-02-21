@@ -1,60 +1,8 @@
 ﻿@model DrinksListViewModel
 
-<div id="drinkDiv">
-
+<div class="row">
+    @foreach (var drink in Model.Drinks)
+    {
+        @Html.Partial("DrinksSummary", drink)
+    }
 </div>
-
-@section scripts{
-    <script>
-
-        $(document).ready(function () {
-            LoadMoreDrinks();
-        });
-
-        $(window).scroll(function () {
-            if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-                LoadMoreDrinks();
-            }
-        });
-
-        function LoadMoreDrinks() {
-            $.ajax({
-                type: 'GET',
-                url: '/api/DrinkData',
-                dataType: 'json',
-                success: function (jsonData) {
-                    if (jsonData == null) {
-                        alert('no data returned');
-                        return;
-                    }
-
-                    $.each(jsonData, function (index, drink) {
-                        var DrinkSummaryString = '<div class="col-sm-4 col-lg-4 col-md-4"> ' +
-                                              '  <div class="thumbnail">' +
-                                              '     <img src="' + drink.imageThumbnailUrl + '" alt="">' +
-                                              '      <div class="caption">' +
-                                              '         <h3 class="pull-right">' + drink.price + '</h3>' +
-                                              '         <h3>' +
-                                              '             <a href=/Drink/Details/' + drink.drinkId + '>' + drink.name + '</a>' +
-                                              '         </h3>' +
-                                              '         <p>' + drink.shortDescription + '</p>' +
-                                              '    </div>' +
-                                              '    <div class="addToCart">' +
-                                              '        <p class="button">' +
-                                              '             <a class="btn btn-primary" href=/ShoppingCart/AddToShoppingCart?drinkId=' + drink.drinkId + '>Add to cart</a>' +
-                                              '         </p>' +
-                                              '     </div>' +
-                                              '  </div>' +
-                                              '</div>';
-
-                        $('#drinkDiv').append(DrinkSummaryString);
-                    });
-                },
-                error: function (ex) {
-                    alert(ex);
-                }
-            });
-            return false;
-        }
-    </script>
-}

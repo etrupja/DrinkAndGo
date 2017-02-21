@@ -33,11 +33,12 @@
             </div>
         </div>
     </nav>
-
-    <div class="container">
-        <div class="row">
-            @RenderBody()
-        </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p><a target="_blank" href="https://github.com/etrupja">&copy; 2017 - Ervis Trupja</a></p>
+        </footer>
     </div>
     @RenderSection("scripts", required: false)
 </body>

@@ -34,7 +34,7 @@ namespace DrinkAndGo.Data
                     },
                     new Drink {
                         Name = "Rum & Coke",
-                        Price = 12.95M, ShortDescription = "Cocktail made of cola, lime, and dark or light rum.",
+                        Price = 12.95M, ShortDescription = "Cocktail made of cola, lime and rum.",
                         LongDescription = "The world's second most popular drink was born in a collision between the United States and Spain. It happened during the Spanish-American War at the turn of the century when Teddy Roosevelt, the Rough Riders, and Americans in large numbers arrived in Cuba. One afternoon, a group of off-duty soldiers from the U.S. Signal Corps were gathered in a bar in Old Havana. Fausto Rodriguez, a young messenger, later recalled that Captain Russell came in and ordered Bacardi (Gold) rum and Coca-Cola on ice with a wedge of lime. The captain drank the concoction with such pleasure that it sparked the interest of the soldiers around him. They had the bartender prepare a round of the captain's drink for them. The Bacardi rum and Coke was an instant hit. As it does to this day, the drink united the crowd in a spirit of fun and good fellowship. When they ordered another round, one soldier suggested that they toast ¡Por Cuba Libre! in celebration of the newly freed Cuba.",
                         Category = Categories["Alcoholic"],
                         ImageUrl = "http://imgh.us/rumCokeL.jpg",
@@ -68,7 +68,7 @@ namespace DrinkAndGo.Data
                     {
                         Name = "Margarita",
                         Price = 17.95M,
-                        ShortDescription = "A cocktail consisting of triple sec, tequila and lime",
+                        ShortDescription = "A cocktail with sec, tequila and lime",
                         Category = Categories["Alcoholic"],
                         LongDescription = "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
                         ImageUrl = "http://imgh.us/margaritaL.jpg",
@@ -114,7 +114,7 @@ namespace DrinkAndGo.Data
                     {
                         Name = "Piña colada ",
                         Price = 15.95M,
-                        ShortDescription = "A sweet cocktail made with rum, coconut cream, pineapple juice.",
+                        ShortDescription = "A sweet cocktail made with rum.",
                         LongDescription = "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
                         Category = Categories["Alcoholic"],
                         ImageUrl = "http://imgh.us/pinaColadaL.jpg",
@@ -138,7 +138,7 @@ namespace DrinkAndGo.Data
                     {
                         Name = "Long Island Iced Tea",
                         Price = 15.95M,
-                        ShortDescription = "An alcoholic mixed drink typically made with tequila.",
+                        ShortDescription = "Aa mixed drink made with tequila.",
                         LongDescription = "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
                         Category = Categories["Alcoholic"],
                         ImageUrl = "http://imgh.us/longTeaL.jpg",
@@ -150,7 +150,7 @@ namespace DrinkAndGo.Data
                     {
                         Name = "Vodka",
                         Price = 15.95M,
-                        ShortDescription = "A distilled beverage composed primarily of water and ethanol.",
+                        ShortDescription = "A distilled beverage with water and ethanol.",
                         LongDescription = "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
                         Category = Categories["Alcoholic"],
                         ImageUrl = "http://imgh.us/vodkaL.jpg",
@@ -162,7 +162,7 @@ namespace DrinkAndGo.Data
                     {
                         Name = "Gin and tonic",
                         Price = 15.95M,
-                        ShortDescription = "A highball cocktail made with gin and tonic water poured over ice.",
+                        ShortDescription = "Made with gin and tonic water poured over ice.",
                         LongDescription = "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
                         Category = Categories["Alcoholic"],
                         ImageUrl = "http://imgh.us/ginTonicL.jpg",
@@ -185,7 +185,7 @@ namespace DrinkAndGo.Data
                     new Drink {
                         Name = "Tea ",
                         Price = 12.95M,
-                        ShortDescription = "Made by infusing leaves of the tea plant in hot water.",
+                        ShortDescription = "Made by leaves of the tea plant in hot water.",
                         LongDescription = "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
                         Category = Categories["Non-alcoholic"],
                         ImageUrl = "http://imgh.us/teaL.jpg",
@@ -209,7 +209,7 @@ namespace DrinkAndGo.Data
                     {
                         Name = "Coffee ",
                         Price = 12.95M,
-                        ShortDescription = " A well-known beverage prepared from coffee beans",
+                        ShortDescription = " A beverage prepared from coffee beans",
                         LongDescription = "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
                         Category = Categories["Non-alcoholic"],
                         ImageUrl = "http://imgh.us/coffeeL.jpg",
