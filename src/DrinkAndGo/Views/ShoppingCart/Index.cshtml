@@ -9,6 +9,7 @@
             <th>Drink</th>
             <th class="text-right">Price</th>
             <th class="text-right">Subtotal</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -21,6 +22,7 @@
                 <td class="text-right">
                     @((line.Amount * line.Drink.Price).ToString("c"))
                 </td>
+                <td class="text-center"><a class="glyphicon glyphicon-remove" asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCart" asp-route-drinkId="@line.Drink.DrinkId" ></a></td>
             </tr>
         }
     </tbody>
