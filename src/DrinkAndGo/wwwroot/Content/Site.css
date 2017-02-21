@@ -23,12 +23,8 @@ body {
     overflow: hidden;
 }
 
-    .caption h4 {
-        white-space: nowrap;
-    }
-
-.thumbnail img {
-    width: 100%;
+.caption h4 {
+    white-space: nowrap;
 }
 
 .addToCart {
@@ -40,10 +36,10 @@ body {
     padding: 0;
 }
 
-    .thumbnail .caption-full {
-        padding: 9px;
-        color: #333;
-    }
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
 
 footer {
     margin: 50px 0;

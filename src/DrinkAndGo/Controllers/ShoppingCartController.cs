@@ -1,6 +1,7 @@
 ﻿using DrinkAndGo.Data.Interfaces;
 using DrinkAndGo.Data.Models;
 using DrinkAndGo.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
@@ -17,6 +18,7 @@ namespace DrinkAndGo.Controllers
             _shoppingCart = shoppingCart;
         }
 
+        [Authorize]
         public ViewResult Index()
         {
             var items = _shoppingCart.GetShoppingCartItems();
@@ -30,6 +32,7 @@ namespace DrinkAndGo.Controllers
             return View(shoppingCartViewModel);
         }
 
+        [Authorize]
         public RedirectToActionResult AddToShoppingCart(int drinkId)
         {
             var selectedDrink = _drinkRepository.Drinks.FirstOrDefault(p => p.DrinkId == drinkId);

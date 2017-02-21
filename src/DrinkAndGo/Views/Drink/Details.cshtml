@@ -1,6 +1,21 @@
 ﻿@model Drink
 
-<h2>Drink details</h2>
-
-@Model.Name
-@Model.LongDescription
+<div class="container">
+    <div class="row">
+        <div class="card">
+            <div class="text-center view overlay hm-white-slight">
+                <img src="@Model.ImageThumbnailUrl" class="img-fluid" alt="">
+                <a href="#">
+                    <div class="mask waves-effect waves-light"></div>
+                </a>
+            </div>
+            <div class="card-block">
+                <!--Title-->
+                <h4 class="card-title">@Model.Name</h4>
+                <!--Text-->
+                <p class="card-text">@Model.LongDescription.</p>
+                <a asp-controller="Drink" asp-action="List" class="btn btn-primary">Show all drinks</a>
+            </div>
+        </div>
+    </div>
+</div>
