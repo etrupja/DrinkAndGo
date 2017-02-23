@@ -32,3 +32,15 @@ a.remove:hover{
     margin: 0 auto;
     width:80% /* value of your choice which suits your alignment */
 }
+
+.marginTop{
+    margin-top:5%;
+}
+
+.marginTop1{
+    margin-top:2%;
+}
+
+.formPullRightButton {
+    margin-right:10px !important
+}

@@ -8,8 +8,6 @@
             <h4>Enter your details below</h4>
             <hr />
             <input type="hidden" asp-for="ReturnUrl" />
-            <div asp-validation-summary="All" class="text-danger"></div>
-
             <div class="form-group">
                 <label asp-for="UserName" class="col-md-2 control-label"></label>
                 <div class="col-md-10">
@@ -26,7 +24,7 @@
                 </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group pull-right formPullRightButton">
                 <div class="col-md-offset-2 col-md-10">
                     <input type="submit" class="btn btn-success" value="Log in" />
                 </div>
