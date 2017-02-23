@@ -11,5 +11,24 @@ nav{
 }
 
 .checkoutForm{
-     margin:5%;
+     margin-top:5%;
+}
+
+.orderForm{
+     margin-top:5%;
+     border-radius:20px;
+     border-style:solid;
+     border-color:#2fa4e7;
+}
+
+a.remove{
+    text-decoration:none;
+}
+a.remove:hover{
+    color:blue;
+}
+
+.center_div{
+    margin: 0 auto;
+    width:80% /* value of your choice which suits your alignment */
 }
