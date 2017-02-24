@@ -8,7 +8,7 @@
     <link href="~/Content/site.css" rel="stylesheet" />
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-    <title>Drink&Go shop</title>
+    <title>Drink&Go</title>
 </head>
 <body>
 
@@ -21,15 +21,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">Drink&Go</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a asp-controller="Home" asp-action="Index">Home</a></li>
                     @await Component.InvokeAsync("CategoryMenu")
-                    <li><a asp-controller="Contact" asp-action="Index">Contact us</a></li>
+                    <li><a asp-controller="Contact" asp-action="Index">About us</a></li>
                     @await Component.InvokeAsync("ShoppingCartSummary")
                 </ul>
                 @await Html.PartialAsync("LoginPartial")
+                <form class="navbar-form navbar-right" asp-controller="Drink" asp-action="Search" method="get">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search for a drink" name="searchString" value="@ViewData["searchString"]">
+                    </div>
+                </form>
             </div>
         </div>
     </nav>

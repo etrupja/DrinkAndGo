@@ -44,3 +44,7 @@ a.remove:hover{
 .formPullRightButton {
     margin-right:10px !important
 }
+
+.carousel img {
+    min-width: 100%;
+}
