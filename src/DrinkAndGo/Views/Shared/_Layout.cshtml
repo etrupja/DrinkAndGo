@@ -11,7 +11,6 @@
     <title>Drink&Go</title>
 </head>
 <body>
-
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -27,7 +26,7 @@
                 <ul class="nav navbar-nav">
                     <li><a asp-controller="Home" asp-action="Index">Home</a></li>
                     @await Component.InvokeAsync("CategoryMenu")
-                    <li><a asp-controller="Contact" asp-action="Index">About us</a></li>
+                    <li><a asp-controller="About" asp-action="Index">About</a></li>
                     @await Component.InvokeAsync("ShoppingCartSummary")
                 </ul>
                 @await Html.PartialAsync("LoginPartial")

@@ -14,7 +14,12 @@
                 <h4 class="card-title">@Model.Name</h4>
                 <!--Text-->
                 <p class="card-text">@Model.LongDescription.</p>
-                <a asp-controller="Drink" asp-action="List" class="btn btn-primary">Show all drinks</a>
+                <p class="btn btn-group pull-right">
+                    <a asp-controller="Drink" asp-action="List" class="btn btn-default">Show all drinks</a>
+                    <a class="btn btn-success" id="cartButton" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-drinkId="@Model.DrinkId">
+                        Add @Model.Name to cart
+                    </a>
+                </p>
             </div>
         </div>
     </div>

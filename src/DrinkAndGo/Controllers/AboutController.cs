@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DrinkAndGo.Controllers
 {
-    public class ContactController : Controller
+    public class AboutController : Controller
     {
         public ViewResult Index()
         {
