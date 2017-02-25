@@ -60,7 +60,7 @@ namespace DrinkAndGo.Controllers
             }
             else
             {
-                drinks = _drinkRepository.Drinks.Where(p => string.Equals(p.Name, _searchString, StringComparison.CurrentCultureIgnoreCase));
+                drinks = _drinkRepository.Drinks.Where(p=> p.Name.ToLower().Contains(_searchString.ToLower()));
             }
 
             return View("~/Views/Drink/List.cshtml", new DrinksListViewModel{Drinks = drinks, CurrentCategory = "All drinks" });
