@@ -64,11 +64,14 @@ namespace DrinkAndGo.Controllers
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("LoggedIn", "Account");
                 }
             }
             return View(loginViewModel);
         }
+
+        public ViewResult LoggedIn() => View();
+
 
         [HttpPost]
         [Authorize]
