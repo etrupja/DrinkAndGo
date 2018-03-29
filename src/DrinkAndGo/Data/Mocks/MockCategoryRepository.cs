@@ -20,7 +20,5 @@ namespace DrinkAndGo.Data.Mocks
                      };
             }
         }
-            
-        }
     }
 }
